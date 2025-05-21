@@ -1,0 +1,149 @@
+body {
+  background-image: url("/images/bacground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container {
+  position: absolute;
+  top: 6%;
+  left: 32%;
+}
+
+.box * {
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.box {
+  border: 2px solid white;
+  color: white;
+  backdrop-filter: blur(7px);
+  padding: 40px 0;
+  position: relative;
+  width: 1300%;
+  max-width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 0 40px rgba(10, 5, 48, 0.6);
+}
+
+.span {
+  display: block;
+  font-size: 40px;
+  margin: 0 auto;
+  width: 240px;
+}
+
+/* .line {
+  width: 45px;
+  height: 4px;
+  background: linear-gradient(to right, rgb(64, 65, 66), rgb(38, 7, 117));
+  top: 85px;
+  border-radius: 5px;
+} */
+
+input::placeholder {
+  color: #e5e5e5;
+}
+
+.name:focus {
+  outline: none;
+  border: none;
+}
+
+.name {
+  font-family: "Poppins", sans-serif;
+  color: rgb(143, 140, 140);
+  font-weight: 300;
+  border: none;
+  font-size: 14px;
+  margin-top: 10px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.07);
+  height: 45px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.box1 {
+  /* height: 2px; */
+  margin: 25px 0px -4px 0px;
+}
+
+.box1 label{
+  font-size: 16px !important;
+  font-weight: 500;
+}
+
+.but {
+  width: 94%;
+  max-width: 650px;
+  height: 50px;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  background: linear-gradient(to right, rgb(64, 65, 66), rgb(38, 7, 117));
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  border: none;
+}
+
+.box3 {
+  margin-left: 5%;
+}
+
+.or {
+  left: 50%;
+  padding: 0 10px;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+}
+
+.divider {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.gmail-dev {
+  margin-top: 30px;
+  font-style:inherit;
+  font-size: 20px;
+
+}
+
+.gmail-dev a {
+  color: rgb(120, 66, 255);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* Responsiv dizayn */
+@media (max-width: 768px) {
+  .box {
+    padding: 20px 0;
+  }
+  .name {
+    font-size: 20px;
+    height: 45px;
+  }
+  .but {
+    font-size: 18px;
+  }
+  .span {
+    font-size: 30px;
+  }
+  .shape {
+    height: 100px;
+    width: 100px;
+  }
+}

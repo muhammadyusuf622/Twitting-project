@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Blog</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/add-blog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <a href="/home" class="logo">
+        <img class="logo-img" src="/images/twitting.webp" alt="Twitting Logo" />
+      </a>
+      <a href="/home" class="active"><i class="fas fa-home"></i></a>
+      <a href="/profile"><i class="fa-solid fa-user"></i></a>
+      <a href="/home"><i class="fa-solid fa-users"></i></a>
+      <a href="/short" class="svg-a"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M13.34 4.13L20.26 16H4v-1C4 9.48 8.05 4.92 13.34 4.13zM33.26 16L22.57 16 15.57 4 26.26 4zM46 15v1H35.57l-7-12H35C41.08 4 46 8.92 46 15zM4 18v17c0 6.08 4.92 11 11 11h20c6.08 0 11-4.92 11-11V18H4zM31 32.19l-7.99 4.54C21.68 37.49 20 36.55 20 35.04v-9.08c0-1.51 1.68-2.45 3.01-1.69L31 28.81C32.33 29.56 32.33 31.44 31 32.19z"/></svg></a>
+      <a href="/profile/liked-videos"><i class="fa-solid fa-heart"></i></a>
+      <a href="/home"><i class="fas fa-envelope"></i></a>
+      <a href="/profile/saved-videos"><i class="fas fa-bookmark"></i></a>
+      <a href="/blogs" class="tweet-btn2">
+        <button class="tweet-btn"><i class="fas fa-feather-alt"></i></button
+      ></a>
+    </div>
+
+    <h2>Add New Blog</h2>
+
+    <form action="/blogs" method="POST" enctype="multipart/form-data">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title"  required>
+
+      <label for="content">Content:</label>
+      <textarea id="content" name="content" rows="6" required></textarea>
+
+
+     <div class="father-img">
+      <div class="for-img">
+        <label for="media" class="upload-btn"><i class="fa-solid fa-image"></i></label>
+        <input type="file" id="media" name="media" accept="image/*, video/*" hidden />
+        <div class="checkVideoOrImage"></div>
+      </div>
+     </div>
+
+
+      <button class="btn" type="submit">Add Blog</button>
+    </form>
+
+    <script src="/js/add-blog.js"></script>
+  </body>
+</html>

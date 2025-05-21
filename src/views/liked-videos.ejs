@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liked posts</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/liked-videos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="sidebar">
+        <a href="/home" class="logo">
+            <img class="logo-img" src="/images/twitting.webp" alt="Twitting Logo" />
+        </a>
+        <a href="/home" class="active"><i class="fas fa-home"></i></a>
+        <a href="/profile"><i class="fa-solid fa-user"></i></a>
+        <a href="/home"><i class="fa-solid fa-users"></i></a>
+        <a href="/short" class="svg-a"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px"
+                height="50px">
+                <path
+                    d="M13.34 4.13L20.26 16H4v-1C4 9.48 8.05 4.92 13.34 4.13zM33.26 16L22.57 16 15.57 4 26.26 4zM46 15v1H35.57l-7-12H35C41.08 4 46 8.92 46 15zM4 18v17c0 6.08 4.92 11 11 11h20c6.08 0 11-4.92 11-11V18H4zM31 32.19l-7.99 4.54C21.68 37.49 20 36.55 20 35.04v-9.08c0-1.51 1.68-2.45 3.01-1.69L31 28.81C32.33 29.56 32.33 31.44 31 32.19z" />
+            </svg></a>
+        <a href="/profile/liked-videos"><i class="fa-solid fa-heart"></i></a>
+        <a href="/home"><i class="fas fa-envelope"></i></a>
+        <a href="/profile/saved-videos"><i class="fas fa-bookmark"></i></a>
+        <a href="/blogs" class="tweet-btn2">
+            <button class="tweet-btn"><i class="fas fa-feather-alt"></i></button></a>
+    </div>
+
+    <main>
+        <h1 class="liked-title">
+            <%= username %>'s liked posts
+        </h1>
+        <div class="posts">
+            <% if (blogs.length> 0) { %>
+              <% blogs.forEach(blog=> { %>
+                <div class="profile-posts">
+                  <!-- <label for="" class="label-trash"><i class="fa-solid fa-trash"></i></label> -->
+                  <% if (blog.imageUrl && blog.imageUrl.match(/\.(jpg|jpeg|png|gif|webp)$/i)) { %>
+                    
+                    <img src="<%= blog.imageUrl %>" alt="Blog Image">
+                    <% } else if (blog.imageUrl && blog.imageUrl.match(/\.(mp4|webm|ogg|MOV|mov)$/i)) { %>
+                      <video class="blog-video" muted loop>
+                        <source src="<%= blog.imageUrl %>" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <% } %>
+                </div>
+                <% }) %>
+                  <% } else { %>
+                    <p id="no-blogs">No blogs yet...</p>
+                    <% } %>
+          </div>
+
+    </main>
+    <script src="/js/liked-videos.js"></script>
+</body>
+
+</html>

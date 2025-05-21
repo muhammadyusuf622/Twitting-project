@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Home</title>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <a href="/home" class="logo"> <img class="logo-img" src="/images/twitting.webp" alt="Twitting Logo"> </a>
+        <a href="/home" class="active"><i class="fas fa-home"></i></a>
+        <a href="/profile"><i class="fa-solid fa-user"></i></a>
+        <a href="/home"><i class="fa-solid fa-users"></i></a>
+        <a href="/short" class="svg-a"><svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px"><path d="M13.34 4.13L20.26 16H4v-1C4 9.48 8.05 4.92 13.34 4.13zM33.26 16L22.57 16 15.57 4 26.26 4zM46 15v1H35.57l-7-12H35C41.08 4 46 8.92 46 15zM4 18v17c0 6.08 4.92 11 11 11h20c6.08 0 11-4.92 11-11V18H4zM31 32.19l-7.99 4.54C21.68 37.49 20 36.55 20 35.04v-9.08c0-1.51 1.68-2.45 3.01-1.69L31 28.81C32.33 29.56 32.33 31.44 31 32.19z"/></svg></a>
+        <a href="/profile/liked-videos"><i class="fa-solid fa-heart"></i></a>
+        <a href="/profile/saved-videos"><i class="fas fa-bookmark"></i></a>
+        <a href="/blogs" class="tweet-btn2"> <button class="tweet-btn"><i class="fas fa-feather-alt"></i></button></a>
+    </div>
+
+  <div class="container">
+    <div class="main">
+      <div class="main-blog">
+
+        <div class="blog">
+
+
+          <% data.forEach(item=> { %>
+
+            <div class="blog-child">
+              <div class="blog-profil">
+                <img class="profil" src="<% if (item.user_id) { %>
+                                            <%= item.user_id.imageUrl %>
+                                            <% } else { %>
+                                              /images/user_not_found.jpg
+                                           <% } %>" alt="">
+                <div class="timeAgo">
+                  <h5>
+                    <% if (item.user_id) { %>
+                      <%= item.user_id.username %>
+                        <% } else { %>
+                          User not found
+                          <% } %>
+                  </h5>
+
+                  <h5 class="time">
+                    <%= item.createdAt %>
+                  </h5>
+                </div>
+              </div>
+              <div class="content">
+                <h3 class="title1">
+                  <%= item.title %>
+                </h3>
+                <h4 class="title2">
+                  <%= item.content %>
+                </h4>
+
+                <% if (item.imageUrl.match(/\.(jpeg|jpg|png|gif|webp)$/i)) { %>
+                  <img class="main-img" src="<%= item.imageUrl %>" alt="">
+                  <% } else if (item.imageUrl.match(/\.(mp4|mkv|avi|mov)$/i)) { %>
+                    <div class="video-container">
+                      <video class="main-video" loop playsinline autoplay>
+                        <source src="<%= item.imageUrl %>" type="video/mp4">
+                      </video>
+                      <div class="volume-controls">
+                        <div class="mute-button"><i class="fa-solid fa-volume-high"></i></div>
+                      </div>
+                    </div>
+                    <% } %>
+
+
+
+              </div>
+
+              <div class="blog-logos">
+                <div class="blog-comment"><i class="fa-solid fa-comment"></i>
+                  <span class="commentCount">
+                    <%= item.commentCount %>
+                  </span>
+                  <div class="box-comment">
+                    <div class="box_cancel-post"> <span id="cancel" class="cancel">Cancel</span> <span></span></div>
+
+                    <div class="comment-container">
+
+                      <div class="owner-comment">
+                        <div class="owner-img"> <img src="<% if (item.user_id) { %>
+                                                            <%= item.user_id.imageUrl %>
+                                                            <% } else { %>
+                                                                 /images/user_not_found.jpg
+                                                            <% } %>" alt="this img"> </div>
+                        <div class="owner-text">
+                          <h5>
+                            <% if (item.user_id) { %>
+                              <%= item.user_id.username %>
+                                <% } else { %>
+                                  User not found
+                                  <% } %>
+                          </h5>
+                          <p>
+                            <%= item.content %>
+                          </p>
+                        </div>
+                        <div class="owner-post-image">
+                          <% if (item.imageUrl.match(/\.(jpeg|jpg|png|gif|webp)$/i)) { %>
+                            <img class="main-img" src="<%= item.imageUrl %>" alt="">
+                            <% } else if (item.imageUrl.match(/\.(mp4|mkv|avi|mov)$/i)) { %>
+                              <video muted paused playsinline>
+                                <source src="<%= item.imageUrl %>" type="video/mp4">
+                              </video>
+                              <% } %>
+                        </div>
+                      </div>
+
+
+                      <div class="commentaria">
+                        <% if (item.comments && item.comments.length> 0) { %>
+                          <% item.comments.forEach(comment=> { %>
+                            <div class="comment">
+                              <i class="comment-cleint_usrenima-or-img">
+                                <img src="<%= comment.image || '/images/user_not_found.jpg' %>" alt="">
+                                <h5>
+                                  <%= comment.username %>
+                                </h5>
+                                <small>
+                                  <%= comment.createdAt %>
+                                </small>
+                              </i>
+                              <p>
+                                <%= comment.comment %>
+                              </p>
+
+                            </div>
+                            <% }) %>
+                              <% } else { %>
+                                <p></p>
+                                <% } %>
+                      </div>
+
+
+
+
+                      <div class="box_cleint-comment">
+                        <div class="cleint-comment_img"> <img src="/images/user_not_found.jpg" alt=""></div>
+                        <textarea maxlength="150" class="comment-textarea" name="cleint-comment"
+                          placeholder="Post your reply"></textarea>
+                        <div class="post" data-postid="<%= userInfo.id %>" data-blogId="<%= item._id %>"><i
+                            class="fa-solid fa-paper-plane"></i></div>
+                      </div>
+
+                      <div class="line-owner-user_add"></div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="like-btn" data-postid="<%= userInfo.id %>" data-blogId="<%= item._id %>"><i
+                    class="fa-solid fa-heart"></i></div>
+                <div class="save-btn" data-postid="<%= userInfo.id %>" data-blogId="<%= item._id %>">
+                  <a href="/"><i class="fas fa-bookmark"></i></a>
+                </div>
+              </div>
+
+              <div class="seeLikes">
+                <h4>
+                 <span class="checkLikeCount"><%= item.likeCount %></span> likes
+                </h4>
+                <div class="likeBox">
+                  <ul>
+                    <% if (item.likes && item.likes.length> 0) { %>
+                      <% item.likes.forEach(like=> { %>
+                        <div class="like_blog_div">
+                          <img class="like_user-image" src=" <%= like.image %>" alt="this user image">
+                          <li>
+                            <%= like.username %>
+                          </li>
+                        </div>
+                        <li class="like-gmail_user">
+                          <%= like.email %>
+                        </li>
+                        <% }) %>
+                          <% } else { %>
+                            <li>No likes yet</li>
+                            <% } %>
+                  </ul>
+                </div>
+              </div>
+
+
+            </div>
+            <% }) %>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+<script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+<script src="/js/index.js"></script>
+</body>
+
+</html>

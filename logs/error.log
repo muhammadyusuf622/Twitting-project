@@ -1,0 +1,23 @@
+{"level":"error","timestamp":"2025-04-10 14:37:55"}
+{"level":"error","path":"C:\\Users\\Administrator\\OneDrive\\Рабочий стол\\blog-loyiha\\src\\views\\error.ejs","timestamp":"2025-04-10 16:03:22"}
+{"level":"error","path":"C:\\Users\\Administrator\\OneDrive\\Рабочий стол\\blog-loyiha\\src\\views\\error.ejs","timestamp":"2025-04-10 16:05:47"}
+{"level":"error","path":"C:\\Users\\Administrator\\OneDrive\\Рабочий стол\\blog-loyiha\\src\\views\\error.ejs","timestamp":"2025-04-10 16:06:07"}
+{"level":"error","path":"C:\\Users\\Administrator\\OneDrive\\Рабочий стол\\blog-loyiha\\src\\views\\error.ejs","timestamp":"2025-04-10 16:06:12"}
+{"level":"error","timestamp":"2025-04-10 21:44:49"}
+{"level":"error","path":"C:\\Users\\Administrator\\OneDrive\\Рабочий стол\\blog-loyiha\\src\\views\\reset-password.ejs","timestamp":"2025-04-10 21:57:57"}
+{"level":"error","path":"C:\\Users\\Administrator\\OneDrive\\Рабочий стол\\blog-loyiha\\src\\views\\reset-password.ejs","timestamp":"2025-04-10 22:02:47"}
+{"level":"error","timestamp":"2025-04-10 22:10:49"}
+{"level":"error","path":"C:\\Users\\Administrator\\OneDrive\\Рабочий стол\\blog-loyiha\\src\\views\\reset-password.ejs","timestamp":"2025-04-10 22:11:36"}
+{"level":"error","path":"C:\\Users\\Administrator\\OneDrive\\Рабочий стол\\blog-loyiha\\src\\views\\reset-password.ejs","timestamp":"2025-04-10 22:12:31"}
+{"level":"error","statusCode":404,"timestamp":"2025-04-21 21:06"}
+{"level":"error","message":"POST /like, - Siz allaqachon like bosgansiz!","timestamp":"2025-04-21 21:06"}
+{"level":"error","statusCode":404,"timestamp":"2025-04-21 21:24"}
+{"level":"error","message":"POST /like, - Siz allaqachon like bosgansiz!","timestamp":"2025-04-21 21:24"}
+{"level":"error","statusCode":404,"timestamp":"2025-04-21 21:24"}
+{"level":"error","message":"DELETE /like, - like not found","timestamp":"2025-04-21 21:24"}
+{"level":"error","statusCode":404,"timestamp":"2025-05-16 23:26"}
+{"level":"error","message":"POST /like, - Siz allaqachon like bosgansiz!","timestamp":"2025-05-16 23:26"}
+{"level":"error","statusCode":404,"timestamp":"2025-05-17 16:55"}
+{"level":"error","message":"POST /like, - Siz allaqachon like bosgansiz!","timestamp":"2025-05-17 16:55"}
+{"level":"error","statusCode":404,"timestamp":"2025-05-19 12:24"}
+{"level":"error","message":"POST /like, - Siz allaqachon like bosgansiz!","timestamp":"2025-05-19 12:24"}

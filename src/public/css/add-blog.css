@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("/images/bacground.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h2 {
+  color: #00bfff;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 0px 0px 15px rgba(3, 95, 242, 0.5);
+}
+
+form {
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  width: 50%;
+  box-shadow: 0px 0px 15px rgba(3, 95, 242, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 15px rgba(3, 95, 242, 0.7);
+}
+
+label {
+  font-size: 18px;
+  color: #00bfff;
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  box-shadow: 0px 0px 10px rgba(0, 191, 255, 0.7);
+}
+
+input[type="file"] {
+  margin-top: 10px;
+  background: transparent;
+  border: none;
+  color: white;
+}
+
+.btn {
+  width: 100%;
+  background: #00bfff;
+  border: none;
+  padding: 12px;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 191, 255, 0.5);
+}
+
+.btn:hover {
+  background: #00bfff;
+  box-shadow: 0px 0px 10px rgba(0, 191, 255, 0.7);
+}
+.upload-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  background: #00bfff;
+  color: white;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 0px 15px rgba(3, 95, 242, 0.7);
+
+}
+
+.father-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.for-img {
+  display: flex;
+  position: relative;
+  border: dashed #222 2px;
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  display: none;
+  z-index: 10;
+}
